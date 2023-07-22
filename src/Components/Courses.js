@@ -1,155 +1,91 @@
 import React from 'react';
-import CoursesItem from './CoursesItem';
+import CourseItem from './CourseItem';
+import { Data } from './CourseData';
+import { useState } from 'react';
 
 export default function Courses(props) {
-  return (
 
-    <>
+    const [search, setSearch] = useState("");
 
-    <div className={`px-14 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
+    return (
 
+        <>
 
-        <img src="img/Skill Up Summer.webp" className="cursor-pointer pt-8 w-[1400px] m-auto rounded-2xl"/>
-        
-        <div className="mt-12 mx-12 space-y-8">
-            <h1 className="text-4xl">
-                <b>Online Courses</b>
-            </h1>
-            <h1 className="cursor-pointer text-xl pb-4 border-gray-300 border-b-2">
-                Free Library
-            </h1>
+            <div className={`container mx-auto px-14 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
 
 
+                <img src="img/Skill Up Summer.webp" className="cursor-pointer pt-8 w-[1400px] m-auto rounded-2xl" alt="Course " />
 
-             <div className=" flex m-auto w-full space-x-4">
-                
+                <div className="mt-12 mx-12 space-y-8">
+                    <h1 className="text-4xl">
+                        <b>Online Courses</b>
+                    </h1>
 
-                {/* To be implemented later using the CoursesItem Component and using the course information through API 
-                
-                <CoursesItem CourseUrl="https://www.youtube.com/playlist?list=PLlHtucAD9KT2VKBwCZooIvDAiJQZ0Hrur"  ImageUrl="img/UiUx.jpg" CourseName="User Experience & User Interface" Time="3 Hrs" Language="Enlgish" Enrolled="2008" /> */}
+                    <div className=" grid grid-cols-2 border-gray-300 border-b-2 dark:border-neutral-600">
 
+                        <h1 className="cursor-pointer text-xl">
+                            Free Library
+                        </h1>
 
-                
+                        <div className="mb-3">
+                            <div className="relative mb-4 flex w-full flex-wrap items-stretch">
+                                <input
+                                    type="search"
+                                    className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary dark:focus:text-neutral-200" 
+                                    placeholder="Search Courses"
+                                    aria-label="Search"
+                                    aria-describedby="button-addon2"
+                                    onChange={(event) => setSearch(event.target.value)} />
 
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400" >
-                        <a href='https://www.youtube.com/playlist?list=PLlHtucAD9KT2VKBwCZooIvDAiJQZ0Hrur' target='_blank'>
-                        <img src="img/UiUx.jpg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>User Experience & User Interface</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
+                                <span
+                                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+                                    id="basic-addon2">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        className="h-5 w-5">
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                                            clipRule="evenodd" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz' target='_blank'>
-                        <img src="img/DSACPP2.jpg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>DataStructures With C++</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
+
+
+
+                    {/* To be implemented later using the CoursesItem Component and using the course information through API  */}
+
+                    <div className="Courses mx-auto grid grid-cols-3 gap-10">{
+
+                        Data.filter((item) => {
+                            return search.toLowerCase() === "" ? item : item.name.toLowerCase().includes(search)
+                        }).map((element) => {
+                            return <div key={element.id} className="">
+                                <CourseItem CourseUrl={element.url} ImageUrl={element.img} CourseName={element.name} Time={element.time} Language={element.language} Enrolled={element.enrolled} />
+                            </div>
+
+                        })
+                    }
+
+
                     </div>
 
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ' target='_blank'>
-                        <img src="img/DSAJAVA.jpg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>DataStrucutres With JAVA</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
 
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://scrimba.com/learn/learnreact' target='_blank'>
-                        <img src="img/ReactJS.jpg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>React Development</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
+
+
+
+
+                </div>
+
 
             </div>
 
-            
-            <div className=" flex m-auto w-full space-x-4">
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                        <a href='https://www.codecademy.com/resources/docs/general/full-stack' target='_blank'>
-                        <img src="img/Full_Stack.png" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>FullStack Web Development</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.youtube.com/playlist?list=PL0rxPh2ovQP_JTqkFUtaZzBXzppx-VSWn' target='_blank'>
-                        <img src="img/JS.png" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Expert JavaScript</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY' target='_blank'>
-                        <img src="img/NodeJS.jpeg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Node JS for Beginners</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.mygreatlearning.com/academy/learn-for-free/courses/my-sql-basics' target='_blank'>
-                        <img src="img/SQL.png" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>MySQL For Beginners</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-            </div>
-
-            
-            <div className=" flex m-auto w-full space-x-4">
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                        <a href='https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop' target='_blank'>
-                        <img src="img/Java.jpg" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Advanced Java</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.youtube.com/playlist?list=PLTjRvDozrdlxj5wgH4qkvwSOdHLOCx10f' target='_blank'>
-                        <img src="img/Python.jpg" className="max-w-xs rounded-t-2xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Python Programming</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://www.mygreatlearning.com/ai/free-courses' target='_blank'>
-                        <img src="img/AI.png" className="max-w-xs rounded-t-3xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Artificial Intelligence</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-
-                    <div className="cursor-pointer border-2 border-gray-300  rounded-t-3xl rounded-b-2xl hover:shadow-xl hover:shadow-gray-400">
-                    <a href='https://youtube.com/playlist?list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI' target='_blank'>
-                        <img src="img/ML.jpeg" className="max-w-xs rounded-t-2xl"/>
-                        <p className="text-xl ml-6 my-2"><b>Machine Learning</b></p>
-                        <p className="ml-6 mb-4"> 3 Hrs | English | 2008 Enrolled </p>
-                        </a>
-                    </div>
-               
-
-
-            </div> 
-
-
-        </div>
-
-
-
-        
-
-    </div>
-    
-    </>
-  )
+        </>
+    )
 }

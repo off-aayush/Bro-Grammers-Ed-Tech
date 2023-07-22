@@ -8,7 +8,7 @@ export default function Navbar(props) {
 
     <>
 
-    <div>
+    <div className="container mx-auto">
 
 
 
@@ -44,11 +44,11 @@ export default function Navbar(props) {
 
 
                 
-                <div className="Hamburger space-y-1 mt-5 md:hidden">
+                {/* <div className="Hamburger space-y-1 mt-5 md:hidden">
                     <ul className="line w-6 h-1 bg-gray-500" ></ul>
                     <ul className="line w-6 h-1 bg-gray-500" ></ul>
                     <ul className="line w-6 h-1 bg-gray-500" ></ul>
-                </div>
+                </div> */}
             </div>
 
         </nav>

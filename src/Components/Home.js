@@ -25,7 +25,7 @@ export default function Home() {
 
     <>
 
-    <div className="w-full bg-neutral-200 scroll-smooth pb-12 dark:bg-slate-900 dark:text-neutral-200 ">
+    <div className="container mx-auto w-full bg-neutral-200 scroll-smooth pb-12 dark:bg-slate-900 dark:text-neutral-200 ">
 
 
 

@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
 
-    <div className="flex justify-between px-20 pt-14 pb-36 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200">
+    <div className="container mx-auto flex justify-between px-20 pt-14 pb-36 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200">
         
         <div className="m-auto mt-10">
             <div className="m-auto text-7xl">
