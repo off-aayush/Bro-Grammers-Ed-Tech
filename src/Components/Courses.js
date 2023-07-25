@@ -3,6 +3,11 @@ import CourseItem from './CourseItem';
 import { Data } from './CourseData';
 import { useState } from 'react';
 
+
+// Will add a new component as a paid courses, will display some paid courses with a new navbar beneath only to swtich between courses
+// Also will redirect the home page butons like 'See Courses' & 'Read More' to course & About component respectively
+
+
 export default function Courses(props) {
 
     const [search, setSearch] = useState("");

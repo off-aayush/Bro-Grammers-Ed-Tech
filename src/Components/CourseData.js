@@ -44,7 +44,7 @@ export const Data = [
     {
         "id":"4",
         "url": 'https://scrimba.com/learn/learnreact',
-        "img": "img/ReactJS.jpg",
+        "img": "img/ReactJS.png",
         "name": "React Development",
         "time": "3 Hrs",
         "language": "English ",
@@ -88,7 +88,7 @@ export const Data = [
     {
         "id":"7",
         "url": 'https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY',
-        "img": "img/NodeJS.jpeg",
+        "img": "img/NodeJS.png",
         "name": "Node JS for Beginners",
         "time": "3 Hrs",
         "language": "English ",
