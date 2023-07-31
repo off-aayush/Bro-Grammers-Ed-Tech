@@ -55,7 +55,7 @@ export default function Home() {
 
 
 
-            <main className="mx-14">
+            <main className="mx-8 pt-8">
                 
                     <div className="Carousel max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
                         {/* <img src="/img/Banner2.jpg" className="w-full mt-12 px-28"/> */}
@@ -89,7 +89,7 @@ export default function Home() {
 
 
 
-                    <div className=" mx-28 text-center">
+                    <div className="mx-6 w-auto text-center">
                         <div className="text-4xl font-bold text-gray-500 dark:text-neutral-200">Discover Our Popular Courses</div>
                         <div className="mt-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt asperiores sequi velit quisquam? Ipsam, libero laborum at sapiente officia impedit id reiciendis voluptatem!</div>
                     </div>
@@ -178,13 +178,13 @@ export default function Home() {
                     </div>
                         
 
-                    <div className="Quotations mt-24 flex justify-between mx-28">
+                    <div className="Explore items-center justify-between mt-24 mx-6 flex flex-wrap">
 
-                        <div className="w-1/3">
+                        <div className="md:w-1/3 w-auto">
                             <img src="/img/working.png" alt="Employee"/>
                         </div>
                         
-                        <div className="w-1/2 mt-4">
+                        <div className="md:w-1/2 w-auto mt-4">
                             <p className=" text-4xl font-bold text-gray-500 dark:text-slate-200">Explore The E-learning Institute</p>  
 
                             <p className="mt-4 text-lg font-medium"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias repellendus, cupiditate voluptate voluptatum temporibus ipsa! Ea iusto odit explicabo velit voluptatibus dolore quia impedit maxime a minima, modi quis eius accusantium. Dolor, magnam tenetur fuga similique laboriosam sed, earum, ipsa possimus molestiae tempora impedit incidunt ut adipisci. 
@@ -214,14 +214,14 @@ export default function Home() {
                     </div>
 
 
-                    <div className="flex mt-12 bg-blue-400 px-24 py-8 justify-between text-white rounded-md">
+                    <div className="flex flex-wrap mt-12 mx-6 md:px-16 px-8 py-4 bg-blue-400 justify-between text-white rounded-md">
                         
-                        <div className="w-1/2">
+                        <div className="md:w-1/2 w-auto">
                             <p className="text-4xl font-bold ">Ready to join? </p>
                             <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto recusandae quaerat repudiandae magni cumque velit! Nemo, quia maiores! Quos asperiores ipsam cum rerum vero eveniet nemo quas alias quam dolorum!</p>                
                         </div>
 
-                        <div className=" mt-10">
+                        <div className="md:mt-10 mt-4">
                             <button className="bg-neutral-200 hover:bg-white text-blue-600 px-6 py-1 rounded-md mt-6 font-semibold"> Register Now</button>
                         </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
 
                     <div>
                         <p className="text-center mt-12 text-2xl font-semibold"> Trusted By Over 800+ Companies</p>
-                        <div className="flex mt-8 space-x-10 md:justify-center">
+                        <div className="flex flex-wrap mt-8 space-x-10 justify-center ">
                             <img className="h-6" src="/img/coursera.png" alt="Companies"/>
                             <img className="h-24 -mt-8" src="/img/FedEX.png" alt="Companies"/>
                             <img className="h-6" src="/img/indeed.png" alt="Companies"/>

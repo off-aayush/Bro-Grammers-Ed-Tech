@@ -16,10 +16,10 @@ export default function Courses(props) {
 
         <>
 
-            <div className={` mx-auto md:px-14 px-2 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
+            <div className={`pt-9 mx-auto md:px-14 px-2 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
 
 
-                <img src="img/Skill Up Summer.webp" className="cursor-pointer pt-8 md:w-[1400px] m-auto rounded-2xl" alt="Course " />
+                <img src="img/Skill Up Summer.webp" className="bg-cover bg-center cursor-pointer pt-8 md:w-[1400px] m-auto rounded-2xl" alt="Course " />
 
                 <div className="mt-12 mx-12 space-y-8">
                     <h1 className="text-4xl">
