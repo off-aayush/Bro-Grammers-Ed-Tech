@@ -16,17 +16,17 @@ export default function Courses(props) {
 
         <>
 
-            <div className={`container mx-auto px-14 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
+            <div className={` mx-auto md:px-14 px-2 pb-12 bg-neutral-200 dark:bg-slate-900 dark:text-neutral-200`}>
 
 
-                <img src="img/Skill Up Summer.webp" className="cursor-pointer pt-8 w-[1400px] m-auto rounded-2xl" alt="Course " />
+                <img src="img/Skill Up Summer.webp" className="cursor-pointer pt-8 md:w-[1400px] m-auto rounded-2xl" alt="Course " />
 
                 <div className="mt-12 mx-12 space-y-8">
                     <h1 className="text-4xl">
                         <b>Online Courses</b>
                     </h1>
 
-                    <div className=" grid grid-cols-2 border-gray-300 border-b-2 dark:border-neutral-600">
+                    <div className=" grid md:grid-cols-2 gap-5 border-gray-300 border-b-2 dark:border-neutral-600">
 
                         <h1 className="cursor-pointer text-xl">
                             Free Library
@@ -66,7 +66,7 @@ export default function Courses(props) {
 
                     {/* To be implemented later using the CoursesItem Component and using the course information through API  */}
 
-                    <div className="Courses mx-auto grid grid-cols-3 gap-10">{
+                    <div className="Courses mx-auto grid md:grid-cols-3 grid-cols-1 gap-10">{
 
                         Data.filter((item) => {
                             return search.toLowerCase() === "" ? item : item.name.toLowerCase().includes(search)

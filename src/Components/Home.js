@@ -51,7 +51,7 @@ export default function Home() {
 
     <>
 
-    <div className="container mx-auto w-full bg-neutral-200 scroll-smooth pb-12 dark:bg-slate-900 dark:text-neutral-200 ">
+    <div className="mx-auto w-full bg-neutral-200 scroll-smooth pb-12 dark:bg-slate-900 dark:text-neutral-200 ">
 
 
 
@@ -229,7 +229,7 @@ export default function Home() {
 
                     <div>
                         <p className="text-center mt-12 text-2xl font-semibold"> Trusted By Over 800+ Companies</p>
-                        <div className="flex mt-8 space-x-10 justify-center">
+                        <div className="flex mt-8 space-x-10 md:justify-center">
                             <img className="h-6" src="/img/coursera.png" alt="Companies"/>
                             <img className="h-24 -mt-8" src="/img/FedEX.png" alt="Companies"/>
                             <img className="h-6" src="/img/indeed.png" alt="Companies"/>
