@@ -1,4 +1,7 @@
 import React, {useState} from 'react'
+import {
+    Link
+  } from 'react-router-dom'
 import {BsChevronCompactLeft} from 'react-icons/bs'
 import {BsChevronCompactRight} from 'react-icons/bs'
 import {RxDotFilled} from 'react-icons/rx'
@@ -55,7 +58,7 @@ export default function Home() {
 
 
 
-            <main className="mx-8 pt-8">
+            <main className="mx-2 pt-8">
                 
                     <div className="Carousel max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
                         {/* <img src="/img/Banner2.jpg" className="w-full mt-12 px-28"/> */}
@@ -89,15 +92,15 @@ export default function Home() {
 
 
 
-                    <div className="mx-6 w-auto text-center">
+                    <div className="mx-2 w-auto text-center">
                         <div className="text-4xl font-bold text-gray-500 dark:text-neutral-200">Discover Our Popular Courses</div>
                         <div className="mt-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt asperiores sequi velit quisquam? Ipsam, libero laborum at sapiente officia impedit id reiciendis voluptatem!</div>
                     </div>
 
-                    <div className="courses mx-28 mt-12 space-y-2">
+                    <div className="courses mx-2 md:mx-16 mt-12 space-y-2">
 
                         <div className="2-2 Pair flex space-x-2">
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
+                            <div className="flex flex-wrap lg:flex-nowrap space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
                                 <img src="/img/UiUx.jpg" className="w-36 rounded-l-lg" alt="Course"/>
                                 <div>
                                     <p className="font-semibold text-lg">Fundamental Of UI/UX Design</p>
@@ -105,7 +108,7 @@ export default function Home() {
                                     <p className="text-blue-500 font-bold text-sm"> Price: $20</p>
                                 </div>
                             </div>
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
+                            <div className="flex flex-wrap lg:flex-nowrap space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
                                 <img src="/img/JS.png" className="w-36 rounded-l-lg" alt="Course"/>
                                 <div>
                                     <p className="font-semibold text-lg">JavaScript Beginner To Advance</p>
@@ -116,7 +119,7 @@ export default function Home() {
                         </div>
 
                         <div className="2-2 Pair flex space-x-2">
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
+                            <div className="flex flex-wrap lg:flex-nowrap space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
                                 <img src="/img/UiUx.jpg" className="w-36 rounded-l-lg" alt="Course"/>
                                 <div>
                                     <p className="font-semibold text-lg">Fundamental Of UI/UX Design</p>
@@ -124,7 +127,7 @@ export default function Home() {
                                     <p className="text-blue-500 font-bold text-sm"> Price: $20</p>
                                 </div>
                             </div>
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
+                            <div className="flex flex-wrap lg:flex-nowrap space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
                                 <img src="/img/JS.png" className="w-36 rounded-l-lg" alt="Course"/>
                                 <div>
                                     <p className="font-semibold text-lg">JavaScript Beginner To Advance</p>
@@ -134,51 +137,15 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="2-2 Pair flex space-x-2">
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
-                                <img src="/img/UiUx.jpg" className="w-36 rounded-l-lg" alt="Course"/>
-                                <div>
-                                    <p className="font-semibold text-lg">Fundamental Of UI/UX Design</p>
-                                    <p className="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus est quae eius expedita qui!</p>
-                                    <p className="text-blue-500 font-bold text-sm"> Price: $20</p>
-                                </div>
-                            </div>
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
-                                <img src="/img/JS.png" className="w-36 rounded-l-lg" alt="Course"/>
-                                <div>
-                                    <p className="font-semibold text-lg">JavaScript Beginner To Advance</p>
-                                    <p className="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus est quae eius expedita qui!</p>
-                                    <p className="text-blue-500 font-bold text-sm"> Price: $25</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="2-2 Pair flex space-x-2">
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
-                                <img src="/img/UiUx.jpg" className="w-36 rounded-l-lg" alt="Course"/>
-                                <div>
-                                    <p className="font-semibold text-lg">Fundamental Of UI/UX Design</p>
-                                    <p className="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus est quae eius expedita qui!</p>
-                                    <p className="text-blue-500 font-bold text-sm"> Price: $20</p>
-                                </div>
-                            </div>
-                            <div className="flex space-x-2 w-1/2 border-2 border-slate-500 rounded-lg cursor-pointer hover:shadow-lg">
-                                <img src="/img/JS.png" className="w-36 rounded-l-lg" alt="Course"/>
-                                <div>
-                                    <p className="font-semibold text-lg">JavaScript Beginner To Advance</p>
-                                    <p className="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus est quae eius expedita qui!</p>
-                                    <p className="text-blue-500 font-bold text-sm"> Price: $25</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <div className="text-center">
-                        < button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-1 rounded-md mt-6 font-semibold"> <a href="https://www.youtube.com/@CodeWithHarry/playlists" rel="noreferrer" target="_blank">Check More Courses</a></button>
+                        < button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-1 rounded-md mt-6 font-semibold"> <Link to="/Courses" >Check More Courses</Link></button>
                     </div>
                         
 
-                    <div className="Explore items-center justify-between mt-24 mx-6 flex flex-wrap">
+                    <div className="Explore items-center justify-between mt-24 mx-2 md:mx-16 flex flex-wrap">
 
                         <div className="md:w-1/3 w-auto">
                             <img src="/img/working.png" alt="Employee"/>
@@ -214,7 +181,7 @@ export default function Home() {
                     </div>
 
 
-                    <div className="flex flex-wrap mt-12 mx-6 md:px-16 px-8 py-4 bg-blue-400 justify-between text-white rounded-md">
+                    <div className="flex flex-wrap mt-12 mx-2 md:mx-16 md:px-16 px-8 py-4 bg-blue-400 justify-between text-white rounded-md">
                         
                         <div className="md:w-1/2 w-auto">
                             <p className="text-4xl font-bold ">Ready to join? </p>
@@ -228,7 +195,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                        <p className="text-center mt-12 text-2xl font-semibold"> Trusted By Over 800+ Companies</p>
+                        <p className="text-center mx-2 mt-12 text-2xl font-semibold"> Trusted By Over 800+ Companies</p>
                         <div className="flex flex-wrap mt-8 space-x-10 justify-center ">
                             <img className="h-6" src="/img/coursera.png" alt="Companies"/>
                             <img className="h-24 -mt-8" src="/img/FedEX.png" alt="Companies"/>
