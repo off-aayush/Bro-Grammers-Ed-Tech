@@ -41,13 +41,13 @@ import {
                             
                             <div className={`Links z-10 py-5 lg:static absolute bg-slate-300 dark:bg-slate-600 left-0 w-full lg:w-auto items-center duration-500 ${ open ? `-top-96` : `top-11`} `}>
                                 <ul className={` items-center space-y-3 lg:space-y-0 lg:space-x-8 mt-2 flex lg:flex-row flex-col text-gray-500 dark:text-neutral-200 font-medium text-lg lg:text-xl`}>  
-                                    <li>
+                                    <li onClick={toggleHamburger}>
                                     <Link className=" hover:cursor-pointer" to="/"> Home </Link>
                                     </li>
-                                    <li> 
+                                    <li onClick={toggleHamburger}> 
                                     <Link className=" hover:cursor-pointer" to="/Courses"> Courses </Link> 
                                     </li>
-                                    <li>
+                                    <li onClick={toggleHamburger}>
                                     <Link className=" hover:cursor-pointer" to="/about"> About </Link>                    
                                     </li>
                                 </ul>
